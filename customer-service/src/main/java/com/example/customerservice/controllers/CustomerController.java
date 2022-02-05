@@ -17,7 +17,7 @@ public class CustomerController {
         return customerService.saveCustomer(customer);
     }
 
-    @PostMapping("/{id}")
+    @GetMapping("/{id}")
     public Customer findCustomer(@PathVariable("id") String id){
         return customerService.findCustomer(id);
     }
