@@ -24,5 +24,5 @@ public class Product {
 
     @Field
     private double price;
-    
+
 }
