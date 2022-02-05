@@ -7,14 +7,19 @@ cloud:
   gateway:
     routes:
       - id: EPLOYEE-SERVICE
-      uri: lb://EPLOYEE-SERVICE
-      predicates:
-        - Path=/employees/
+        url: lb://EPLOYEE-SERVICE
+        predicates:
+          - Path=/employees/
 
-        - id: PRODUCT-SERVICE
-      url: lb://PRODUCT-SERVICE
-      predicates:
-        - Path=/products/
+      - id: PRODUCT-SERVICE
+        url: lb://PRODUCT-SERVICE
+        predicates:
+          - Path=/products/
+
+      - id: CUSTOMER-SERVICE
+        url: lb://CUSTOMER-SERVICE
+        predicates:
+          - Path=/customers/
 eureka:
   client:
     register-with-eureka: true
